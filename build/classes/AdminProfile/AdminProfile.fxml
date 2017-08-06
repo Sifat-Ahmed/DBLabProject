@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="960.0" stylesheets="@../home.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminProfile.AdminProfileController">
+   <children>
+      <Text fx:id="usernameTxt" layoutX="40.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sifat69" textAlignment="CENTER" wrappingWidth="132.2197265625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="40.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#updateBtnClicked" prefHeight="37.0" prefWidth="149.0" text="Update Account" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="40.0" layoutY="385.0" mnemonicParsing="false" onMouseClicked="#logoutBtnClicked" prefHeight="37.0" prefWidth="149.0" text="Logout" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="39.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rank: " wrappingWidth="50.2197265625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="39.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score: " wrappingWidth="68.21970748901367">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="132.0" layoutX="39.0" layoutY="31.0" onMouseClicked="#profileImageClicked" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../profile.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="227.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#allProblemsBtnClicked" prefHeight="37.0" prefWidth="139.0" text="All Problems" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="537.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#submissionsBtnClicked" prefHeight="37.0" prefWidth="132.0" text="Submissions" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="690.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#rankListBtnClicked" prefHeight="37.0" prefWidth="110.0" text="Rank List" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView layoutX="227.0" layoutY="80.0" prefHeight="355.0" prefWidth="701.0" />
+      <Button layoutX="818.0" layoutY="31.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="110.0" text="Create New" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="40.0" layoutY="436.0" mnemonicParsing="false" onMouseClicked="#deleteBtnClicked" prefHeight="37.0" prefWidth="149.0" text="Delete Account" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="779.0" layoutY="449.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="149.0" text="Delete" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="385.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#MyProblemsBtnClicked" prefHeight="37.0" prefWidth="132.0" text="My Problems" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text fx:id="rankTxt" layoutX="105.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="68.21969032287598">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="scoreTxt" layoutX="105.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="68.21969032287598">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

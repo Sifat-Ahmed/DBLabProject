@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="960.0" stylesheets="@../home.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserProfile.UserprofileController">
+   <children>
+      <Text layoutX="47.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sifat69" textAlignment="CENTER" wrappingWidth="132.2197265625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="47.0" layoutY="336.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="149.0" text="Update Account" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="47.0" layoutY="385.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="149.0" text="Logout" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="47.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rank: " wrappingWidth="132.2197265625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score: " wrappingWidth="132.2197265625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="132.0" layoutX="46.0" layoutY="28.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../profile.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="255.0" layoutY="28.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="139.0" text="Problems" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="522.0" layoutY="28.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="149.0" text="Submissions" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="786.0" layoutY="28.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="149.0" text="Rank List" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView layoutX="257.0" layoutY="77.0" prefHeight="362.0" prefWidth="678.0" />
+      <Button layoutX="786.0" layoutY="452.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="149.0" text="Select" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="47.0" layoutY="433.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="149.0" text="Delete Account" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

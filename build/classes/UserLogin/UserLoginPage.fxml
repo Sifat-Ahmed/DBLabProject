@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="369.0" prefWidth="528.0" stylesheets="@../../home.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserLogin.UserLoginPageController">
+   <children>
+      <TextField fx:id="usernameTxt" layoutX="182.0" layoutY="86.0" prefHeight="30.0" prefWidth="303.0" promptText="Enter username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="43.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="94.99999326467514">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="passwordTxt" layoutX="183.0" layoutY="142.0" prefHeight="30.0" prefWidth="303.0" promptText="Enter Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="43.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="106.99999499320984">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="loginBtn" layoutX="372.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#login_btnClicked" prefHeight="42.0" prefWidth="114.0" text="Login" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="43.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Type:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="typeCombo" layoutX="184.0" layoutY="199.0" prefHeight="25.0" prefWidth="159.0" promptText="Select Type" visibleRowCount="2" />
+      <Label fx:id="msgLabel" layoutX="182.0" layoutY="248.0" prefHeight="17.0" prefWidth="303.0" textFill="RED" />
+   </children>
+</AnchorPane>
