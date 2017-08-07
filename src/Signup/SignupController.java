@@ -5,6 +5,9 @@ import AdminProfile.AdminProfileController;
 import indicator.Indicator;
 import DatabaseHandler.Database;
 import UserProfile.UserprofileController;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -134,6 +137,12 @@ public class SignupController implements Initializable {
     {
         String query;
         PreparedStatement statement;
+        File file;
+        FileInputStream fin;
+ 
+        file = new File("profile.jpg");
+        System.out.println(file.getAbsolutePath());
+        fin = new FileInputStream(file);
 
         // username , email are primary keys
         // that means these values need to be unique
@@ -169,13 +178,20 @@ public class SignupController implements Initializable {
 
         if(canRegister)
         {
-            query = "INSERT INTO "+ table +"(username,email,password) VALUES (?,?,?)";
+            if(table.equals("Admin"))
+            {
+                query = "INSERT INTO "+ table +"(username,email,password,img) VALUES (?,?,?,?)";
+            }
+            else
+                query = "INSERT INTO "+ table +"(username,email,password) VALUES (?,?,?)";
+                
             // if everything is all right then insert them into database
             statement = Database.conn.prepareStatement(query , Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, username);
             statement.setString(2, email);
             statement.setString(3, password);
-
+            if(table.equals("Admin"))
+                statement.setBinaryStream(4,(InputStream)fin,(int)file.length());
             statement.execute();
             msgLabel.setText("");
             System.out.println("Registration successful as " + typeCombo.getValue() );
@@ -183,15 +199,26 @@ public class SignupController implements Initializable {
             rs = statement.getGeneratedKeys();
             if(rs.next())
             {
-                System.out.println(rs.getInt(1));
-                Indicator.setUser_id(rs.getInt(1));
+                if (table.equals("User"))
+                {
+                   
+                    System.out.println("executing...");
+                    query = "INSERT INTO userDetails(score,rank,userId,img) VALUES (?,?,?,?)";
+                    // if everything is all right then insert them into database
+                    statement = Database.conn.prepareStatement(query);
+                    statement.setInt(1, 0);
+                    statement.setInt(2, 0);
+                    statement.setInt(3, rs.getInt(1));
+                    statement.setBinaryStream(4,(InputStream)fin,(int)file.length());
+                    Indicator.setUser_id(rs.getInt(1));
+                    statement.execute();
+                    msgLabel.setText("");
+                    System.out.println("Registration successful as " + typeCombo.getValue() );
+
+                }
             }
-            
-            
+           
         }
     }
-    
-    
-    
-    
+ 
 }

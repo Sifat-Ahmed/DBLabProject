@@ -15,7 +15,7 @@ public class Database
     public static Statement statement = null;
     
     
-    public static void connectDatabase()
+    public static void connectDatabase() throws SQLException
     {
         try {
 

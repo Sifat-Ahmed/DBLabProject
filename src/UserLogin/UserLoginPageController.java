@@ -95,7 +95,7 @@ public class UserLoginPageController implements Initializable {
                 Parent loginDir = (Parent) fxmlLoader.load();
                 Stage userprofile = new Stage();
                 userprofile.setScene(new Scene(loginDir));  
-                userprofile.setTitle("Welcome " + username);
+                userprofile.setTitle(username + " - "+ table + "Panel");
                 userprofile.setResizable(false);
                 userprofile.show();
 

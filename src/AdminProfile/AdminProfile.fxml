@@ -15,26 +15,16 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button layoutX="40.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#updateBtnClicked" prefHeight="37.0" prefWidth="149.0" text="Update Account" textAlignment="CENTER">
+      <Button layoutX="40.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#updateBtnClicked" prefHeight="37.0" prefWidth="149.0" text="Update Account" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="40.0" layoutY="385.0" mnemonicParsing="false" onMouseClicked="#logoutBtnClicked" prefHeight="37.0" prefWidth="149.0" text="Logout" textAlignment="CENTER">
+      <Button layoutX="40.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#logoutBtnClicked" prefHeight="37.0" prefWidth="149.0" text="Logout" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Text layoutX="39.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rank: " wrappingWidth="50.2197265625">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text layoutX="39.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score: " wrappingWidth="68.21970748901367">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
       <ImageView fitHeight="150.0" fitWidth="132.0" layoutX="39.0" layoutY="31.0" onMouseClicked="#profileImageClicked" pickOnBounds="true" smooth="false">
          <image>
             <Image url="@../../profile.jpg" />
@@ -61,7 +51,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="40.0" layoutY="436.0" mnemonicParsing="false" onMouseClicked="#deleteBtnClicked" prefHeight="37.0" prefWidth="149.0" text="Delete Account" textAlignment="CENTER">
+      <Button layoutX="40.0" layoutY="375.0" mnemonicParsing="false" onMouseClicked="#deleteBtnClicked" prefHeight="37.0" prefWidth="149.0" text="Delete Account" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>

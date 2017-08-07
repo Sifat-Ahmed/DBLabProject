@@ -11,6 +11,8 @@ public class Main extends Application
     @Override
     public void start(Stage stage) throws Exception 
     {
+        // Connecting to database as the application starts
+        Database.connectDatabase();
         // accessing the FXML File from project directory
         Parent root = FXMLLoader.load(getClass().getResource("StartPage.fxml"));
         // Creating a new Secene with the pointer
@@ -26,8 +28,7 @@ public class Main extends Application
         // keeping the previous page tracked so the it can be disabled 
         // when movved to the next page
         Indicator.setCurrentPage(stage);
-        // Connecting to database as the application starts
-        Database.connectDatabase();
+        
        
     }
 

@@ -1,6 +1,7 @@
 
 package AdminProfile;
 
+import indicator.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -17,13 +18,14 @@ public class AdminProfileController implements Initializable {
     private Text rankTxt;
     @FXML
     private Text scoreTxt;
-
+    
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb) 
+    {
+        
     }    
 
     @FXML

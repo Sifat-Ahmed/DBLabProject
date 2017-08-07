@@ -1,4 +1,5 @@
 
+import DatabaseHandler.Database;
 import indicator.Indicator;
 import UserLogin.UserLoginPageController;
 import Signup.SignupController;
@@ -12,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -21,12 +23,26 @@ public class FXMLDocumentController implements Initializable {
     private Button registerBtn;
     @FXML
     private Button loginBtn;
-
+    @FXML
+    private Text msg;
+    
     private Stage prev;
     
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        
+    public void initialize(URL url, ResourceBundle rb) 
+    {
+        if(Database.conn == null)
+        {
+            registerBtn.setDisable(true);
+            loginBtn.setDisable(true);
+            msg.setText("Database Connection Failed");
+        }
+        else
+        {
+            registerBtn.setDisable(false);
+            loginBtn.setDisable(false);
+            msg.setText("");
+        }
     }    
 
     @FXML
@@ -68,5 +84,6 @@ public class FXMLDocumentController implements Initializable {
            e.printStackTrace();
           }
     }
+    
     
 }
