@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package indicator;
 
 import DatabaseHandler.Database;
@@ -60,7 +56,7 @@ public class Admin {
         this.profileImg= img;
     }
 
-    public static void createUser()
+    public static void createAdmin()
     {
         try 
         {
@@ -75,8 +71,6 @@ public class Admin {
                 String username = rs.getString("username");
                 String email = rs.getString("email");
                 String password = rs.getString("password");
-                int score = rs.getInt("score");
-                int rank = rs.getInt("rank");
                 int uid = rs.getInt("id");
                 image = rs.getBlob("img");
                 byteImage = image.getBytes(1,(int)image.length());

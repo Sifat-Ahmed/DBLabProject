@@ -25,7 +25,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="150.0" fitWidth="132.0" layoutX="39.0" layoutY="31.0" onMouseClicked="#profileImageClicked" pickOnBounds="true" smooth="false">
+      <ImageView fx:id="img" fitHeight="150.0" fitWidth="132.0" layoutX="39.0" layoutY="31.0" onMouseClicked="#profileImageClicked" pickOnBounds="true" smooth="false">
          <image>
             <Image url="@../../profile.jpg" />
          </image>
@@ -45,7 +45,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <TableView layoutX="227.0" layoutY="80.0" prefHeight="355.0" prefWidth="701.0" />
+      <TableView fx:id="table" layoutX="227.0" layoutY="80.0" prefHeight="355.0" prefWidth="701.0" />
       <Button layoutX="818.0" layoutY="31.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="110.0" text="Create New" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
